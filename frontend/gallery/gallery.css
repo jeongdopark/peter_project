@@ -1,0 +1,168 @@
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+
+.nav_container{
+    display: flex;
+    margin : 1.5rem 3%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main_icon_black{
+    width : 50px;
+    height : 50px;
+}
+
+.main_icon{
+    display: flex;
+    align-items: baseline;
+    cursor: pointer;
+}
+
+.nav_element_container a:before{
+    content : '';
+    position : absolute;
+    height : 2px;
+    background-color: black;
+    display: block;
+    top : 25px;
+    left : 0px;
+    width : 0%;
+    transition : ease-in 0.3s;
+}
+
+.nav_element_container a:hover:before{
+    width : 100%;
+}
+
+.nav_element_container{
+    width : 30%;
+}
+.nav_element_container ul{
+    
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.nav_element_container a{
+    position : relative;
+    cursor: pointer;
+    text-decoration: none;
+    color : black;
+}
+
+
+
+.dark_mode_input{
+    appearance: none;
+    visibility: hidden;
+    display: none;
+}
+
+.dark_mode_check{
+    position : relative;
+    display: block;
+    width : 40px;
+    height : 20px;
+    background : #092c4e;
+    cursor: pointer;
+    border-radius: 20px;
+    overflow: hidden;
+    transition : ease-in 0.5s;
+}
+
+.dark_mode_input:checked ~ .dark_mode_check{
+    background : #fff; 
+    
+}
+
+.dark_mode_check:before{
+    content: '';
+    position : absolute;
+    top : 2px;
+    left : 2px;
+    width : 16px;
+    height : 16px;
+    background-color: #f5f5f5;
+    
+    border-radius: 50%;
+    transition: ease-in 0.3s;
+}
+
+.dark_mode_check:after{
+    content: '';
+    position : absolute;
+    top : 2px;
+    left : 72px;
+    width : 16px;
+    height : 16px;
+    background-color: #092c4e;
+    border-radius: 50%;
+    transition: ease-in 0.3s;
+}
+
+.dark_mode_input:checked ~ .dark_mode_check:before
+{
+    transform : translateX(-50px);
+}
+
+.dark_mode_input:checked ~ .dark_mode_check:after{
+    transform : translateX(-50px);
+}
+
+.dark_mode_container{
+    width : 50px;
+}
+
+
+.carousel{
+    margin : 0 auto;
+    width : 62%;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.carousel_container{
+    margin-top : 50px;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    transition: ease-in 0.3s;
+    width : 100%;
+}
+
+.carousel_element{
+    margin : 5px;
+}
+.carousel_element img{
+    width : 300px;
+    height : 300px;
+}
+
+.arrow_common{
+    position : absolute;
+    width : 15px;
+    cursor: pointer;
+    transition : ease-in 0.1s;
+}
+
+.arrow_common:hover{
+    width : 20px;
+}
+
+.left_arrow{
+    margin-right : 50px;
+    left : 200px;
+}
+
+.right_arrow{
+    right : 200px;
+    margin-left : 50px;
+}
